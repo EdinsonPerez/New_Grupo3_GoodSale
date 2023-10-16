@@ -44,3 +44,29 @@ document.addEventListener('DOMContentLoaded', function() {
     return totalPricePerPerson;
   }
   
+
+
+/*FUNCIONES PARA VALIDAR FORMULARIO*/
+
+
+function validarFormulario() {
+    // obtengo valores
+    var firstname = document.getElementById("firstname").value;
+    var zipcode = document.getElementById("zipcode").value;
+
+    // valido
+    if (firstname.trim().length < 3 || !/^[A-Za-z]+$/.test(firstname)) {
+        alert("El nombre debe tener al menos 3 letras y no debe contener números.");
+        return false;
+    }
+
+    if (zipcode.trim().length < 4 || !/^\d+$/.test(zipcode)) {
+        alert("El código postal debe tener al menos 4 dígitos numéricos.");
+        return false;
+    }
+
+    return true; 
+}
+
+
+/*FIN FUNCIONES PARA VALIDAR FORMULARIO*/

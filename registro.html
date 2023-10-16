@@ -3,10 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <title>Registro</title>
 </head>
@@ -35,26 +34,24 @@
 
   <div class="content">
 
-    <form class="formulario" action="show_data.html" target="_blank">
-      <!--Le dice a donde enviar los datos de mi página>-->
+    <form class="formulario" action="show_data.html" target="_blank" onsubmit="return validarFormulario()">
+      
       <h2>Formulario de registro</h2>
-      <label for="firstname">Nombre:</label><input type="text" name="firstname" placeholder="Ingrese su nombre aquí...">
-      <label for="lastname">Apellido:</label><input type="text" name="lastname"
-        placeholder="Ingrese su apellido aquí...">
-      <label for="street">Dirección:</label><input type="text" name="adress" placeholder="Ingrese su dirección aquí...">
+      <label for="firstname">Nombre:</label><input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aquí..." required>
+      <label for="lastname">Apellido:</label><input type="text" name="lastname" placeholder="Ingrese su apellido aquí..." >
+      <label for="street">Dirección:</label><input type="text" name="adress" placeholder="Ingrese su dirección aquí..." >
       <label for="city">Ciudad:</label><input type="text" name="city" value="C.A.B.A">
       <br>
-      <label for="zipcode">Código postal:</label><input type="text" name="zipcode"
-        placeholder="Ingrese su código postal aquí...">
+      <label for="zipcode">Código postal:</label><input type="text" name="zipcode" id="zipcode" placeholder="Ingrese su código postal aquí..." required>
       <br>
       <label for="BirdhDate">Fecha de nac.:</label> <input type="text" name="birthdate">
       <p>Género
         <input type="radio" name="gender" value="Hombre" checked>Hombre
-        <input type="radio" name="gender" value="Mujer" checked>Mujer
+        <input type="radio" name="gender" value="Mujer" checked>Mujers
         <input type="radio" name="gender" value="Otro" checked>Otro
       </p>
-      <id id="comment" name="comment" cols="40" rows="8" maxlength="65525" required="required"
-        value="Agregue aquí su comentario..."></id>
+      <textarea id="comment" name="comment" cols="40" rows="8" maxlength="65525" required>Agregue aquí su comentario...
+    </textarea>
 
       <input type="submit" value="Enviar">
       </p>
@@ -63,24 +60,27 @@
   </div>
 
   <footer>
-    <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+    <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"
+    <a class="redsoc" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"
+    <a class="redsoc" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.whatsapp.com" target="_blank"><i class="fa fa-whatsapp"
+    <a class="redsoc" href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest"
+    <a class="redsoc" href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"
         aria-hidden="true"></i></a>
-    <a class="redsoc" href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"
+    <a class="redsoc" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"
         aria-hidden="true"></i></a>
     <br>
     <p>Derechos reservados @2023</p>
     <br>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 
-<script src="script.js"></script>
+
+
+
+
 </html>
