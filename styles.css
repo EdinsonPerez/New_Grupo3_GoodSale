@@ -419,25 +419,22 @@ footer {
 footer {
   margin-top: 100px; /* Ajusta este valor según tu preferencia para que el footer aparezca después de las tarjetas */
 }
-
 #pagination {
-  text-align: center; /* Centra los botones de paginación */
-  margin-top: 20px; /* Ajusta el margen superior según tus preferencias */
+  text-align: center;
+  margin-top: 20px;
 }
 
-#prevPage,
-#nextPage {
-  background-color: #007BFF; /* Color de fondo del botón */
-  color: #fff; /* Color del texto */
-  padding: 10px 20px; /* Ajusta el espacio alrededor del texto */
+button#prevPage, button#nextPage {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin: 0 10px; /* Ajusta el margen entre los botones */
 }
 
-#prevPage:hover,
-#nextPage:hover {
-  background-color:#ccc /* Cambia el color de fondo al pasar el cursor por encima */
+button#prevPage:disabled, button#nextPage:disabled {
+  background-color: #ccc; /* Color de fondo del botón deshabilitado */
+  cursor: not-allowed;
 }
-
-
