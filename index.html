@@ -33,48 +33,52 @@
     </nav>
 
     <section id="Inicio">
-        <video id="video" loop="" autoplay="" preload="" muted="" src="./imagen/Pexels Videos 3372.mp4" type="video/4"></video>
+        <video id="video" loop="" autoplay="" preload="" muted="" src="./imagen/Pexels Videos 3372.mp4"
+            type="video/4"></video>
     </section>
 
     <div class="content">
-        
-            
-                <div class="heading">
-                    <h1 class="title">PAISES PARA VIAJAR</h1>
-                  </div>
-                  
-          
-              </div>
-              <!-- Agrega esta estructura donde deseas mostrar las tarjetas -->
-              <div id="card-container" class="row">
-                <!-- Las tarjetas se agregarán aquí dinámicamente mediante JavaScript -->
-              </div>
+        <div class="heading">
+            <h1 class="title">PAISES PARA VIAJAR</h1>
+        </div>
 
-              <div id="pagination">
-                <button id="prevPage">Anterior</button>
-                <button id="nextPage">Siguiente</button>
-            </div>
-            
+
     </div>
-    
+    <!-- Agrega esta estructura donde deseas mostrar las tarjetas -->
+    <div id="card-container" class="row">
+        <!-- Las tarjetas se agregarán aquí dinámicamente mediante JavaScript -->
+    </div>
+
+    <div id="pagination">
+        <button id="prevPage">Anterior</button>
+        <button id="nextPage">Siguiente</button>
+    </div>
+
+
+
     <!-- Agrega esta etiqueta en el encabezado de tu HTML para cargar el JSON -->
     <script src="data.js"></script>
     <!-- Agrega este script al final de tu HTML, antes de cerrar el cuerpo </body> -->
     <script src="script.js"></script>
-        
+
     <footer>
-        <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-        
-      
+        <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"
+                aria-hidden="true"></i></a>
+        <a class="redsoc" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
+                aria-hidden="true"></i></a>
+        <a class="redsoc" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"
+                aria-hidden="true"></i></a>
+        <a class="redsoc" href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"
+                aria-hidden="true"></i></a>
+        <a class="redsoc" href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest"
+                aria-hidden="true"></i></a>
+        <a class="redsoc" href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"
+                aria-hidden="true"></i></a>
+
         <br>
         <p>Grupo # 3 Derechos reservados @2023</p>
         <br>
-      </footer>
+    </footer>
 </body>
 
 <script>
@@ -111,48 +115,48 @@
         countries.forEach((country) => {
             // Crea y agrega tarjetas aquí
             // ...
-                const flag = country.flags[0]; // La URL de la bandera
-                const name = country.name.common;
-                const capital = country.capital[0];
-                const currency = country.currencies[Object.keys(country.currencies)[0]].name;
+            const flag = country.flags[0]; // La URL de la bandera
+            const name = country.name.common;
+            const capital = country.capital[0];
+            const currency = country.currencies[Object.keys(country.currencies)[0]].name;
 
-                // Crea una tarjeta y agrega los datos
-                const card = document.createElement('div');
-                card.classList.add('card');
+            // Crea una tarjeta y agrega los datos
+            const card = document.createElement('div');
+            card.classList.add('card');
 
-                const cardHeader = document.createElement('div');
-                cardHeader.classList.add('card-header');
-                const flagImage = document.createElement('img');
-                flagImage.src = flag;
-                cardHeader.appendChild(flagImage);
+            const cardHeader = document.createElement('div');
+            cardHeader.classList.add('card-header');
+            const flagImage = document.createElement('img');
+            flagImage.src = flag;
+            cardHeader.appendChild(flagImage);
 
-                const cardBody = document.createElement('div');
-                cardBody.classList.add('card-body');
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
 
-                const cardTitle = document.createElement('h1');
-                cardTitle.classList.add('card-title');
-                cardTitle.textContent = name;
+            const cardTitle = document.createElement('h1');
+            cardTitle.classList.add('card-title');
+            cardTitle.textContent = name;
 
-                const cardInfo = document.createElement('p');
-                cardInfo.textContent = `Capital: ${capital}, Moneda: ${currency}`;
+            const cardInfo = document.createElement('p');
+            cardInfo.textContent = `Capital: ${capital}, Moneda: ${currency}`;
 
-                const cardButton = document.createElement('a');
-                cardButton.href = './servicios.html'; // Agrega el enlace adecuado
-                cardButton.classList.add('btn');
-                cardButton.textContent = 'VER MÁS';
+            const cardButton = document.createElement('a');
+            cardButton.href = './servicios.html'; // Agrega el enlace adecuado
+            cardButton.classList.add('btn');
+            cardButton.textContent = 'VER MÁS';
 
-                cardBody.appendChild(cardTitle);
-                cardBody.appendChild(cardInfo);
-                cardBody.appendChild(cardButton);
+            cardBody.appendChild(cardTitle);
+            cardBody.appendChild(cardInfo);
+            cardBody.appendChild(cardButton);
 
-                card.appendChild(cardHeader);
-                card.appendChild(cardBody);
+            card.appendChild(cardHeader);
+            card.appendChild(cardBody);
 
-                // Agrega la tarjeta al contenedor de tarjetas
-                cardContainer.appendChild(card);
-            });
-            
-        
+            // Agrega la tarjeta al contenedor de tarjetas
+            cardContainer.appendChild(card);
+        });
+
+
         // Actualiza la paginación
         updatePagination();
     }
