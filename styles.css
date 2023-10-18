@@ -427,14 +427,62 @@ footer {
 button#prevPage, button#nextPage {
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
+  background-color: #007bff; 
+  color: #fff; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button#prevPage:disabled, button#nextPage:disabled {
-  background-color: #ccc; /* Color de fondo del botón deshabilitado */
+  background-color: #ccc; 
   cursor: not-allowed;
 }
+
+/* Estilos para el modo claro  y oscuro*/
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color:black;
+  color: #fff;
+}
+
+.card {
+background-color: #fff; 
+color: black; 
+}
+
+body.dark-mode .card {
+background-color: black; 
+color: #fff; 
+}
+
+.formulario input[type="submit"] {
+background-color:#598FBC; 
+color: #fff; 
+}
+
+.dark-content {
+color: white; 
+background-color:black; 
+}
+
+  
+body.dark-mode .formulario {
+background-color: black; 
+color: #fff; 
+}
+
+body.dark-mode .form-container {
+  background-color: black;
+  color: #fff;
+}
+
+body.dark-mode .Servicios {
+  background-color:black;
+  color: #fff;
+}
+

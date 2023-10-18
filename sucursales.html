@@ -31,7 +31,8 @@
     </ul>
   </nav>
 
-
+  <button id="modo-oscuro">Modo Oscuro</button>
+  
   
   <div class="content">
     <header>
@@ -88,6 +89,16 @@
     <p>Grupo # 3 Derechos reservados @2023</p>
     <br>
   </footer>
+  <script>
+
+    const modoOscuroButton = document.getElementById("modo-oscuro");
+    const body = document.body;
+
+    modoOscuroButton.addEventListener("click", function () {
+      body.classList.toggle("dark-mode");
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
