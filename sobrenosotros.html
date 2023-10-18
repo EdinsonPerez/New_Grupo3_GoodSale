@@ -29,10 +29,14 @@
             <li><a href="./sucursales.html">Sucursales</a></li>
         </ul>
     </nav>
+    
 
     <section id="portada">
         <img src="./imagen/portada2.jpeg" alt="Foto portada">
     </section>
+    
+    <button id="modo-oscuro">Modo Oscuro</button>
+    <script src="script.js"></script>
 
     <div class="container">
         <div class="team-text">
@@ -77,6 +81,15 @@
             <p>Grupo # 3 Derechos reservados @2023</p>
             <br>
         </footer>
+        <script>
+        
+            const modoOscuroButton = document.getElementById("modo-oscuro");
+            const body = document.body;
+    
+            modoOscuroButton.addEventListener("click", function () {
+                body.classList.toggle("dark-mode");
+            });
+        </script>
 </body>
 
 </html>

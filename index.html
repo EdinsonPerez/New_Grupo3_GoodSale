@@ -35,6 +35,8 @@
         <video id="video" loop="" autoplay="" preload="" muted="" src="./imagen/Pexels Videos 3372.mp4"
             type="video/4"></video>
     </section>
+    
+    <button id="modo-oscuro">Modo Oscuro</button>
 
     <div class="content">
         <div class="heading">
@@ -75,6 +77,15 @@
         <p>Grupo # 3 Derechos reservados @2023</p>
         <br>
     </footer>
+    <script>
+        
+        const modoOscuroButton = document.getElementById("modo-oscuro");
+        const body = document.body;
+
+        modoOscuroButton.addEventListener("click", function () {
+            body.classList.toggle("dark-mode");
+        });
+    </script>
 </body>
 
 <script>
